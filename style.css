@@ -60,6 +60,16 @@ ul {
     margin-top: 10rem;
     width: 100%;
     box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
+    background-color: #171616;
+    color: #ffff;
+    border-radius: 10px;
+}
+.color-component h2 {
+    font-size: 35px;
+}
+.color-component h3 {
+    margin-top: 1rem;
+    font-size: 30px;;
 }
 .button { 
     padding : 1rem;
@@ -69,4 +79,10 @@ ul {
     box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     color: #b0726a;
+    font-size : 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.button:hover {
+    background-color:coral ;
 }
