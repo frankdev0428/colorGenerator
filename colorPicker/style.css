@@ -25,7 +25,6 @@ body {
     background-color: #ffff;
     border-radius : 5px;
     box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
-    color: #b0726a;
     padding: 3rem;
     margin: 1rem;
     font-weight: 600;
@@ -34,6 +33,7 @@ body {
     /* border: 1px solid black; */
     font-size: 40px;
     font-weight: larger;
+    color: #188bf0;
 }
 .navLinks {
     /* border : 1px solid black; */
@@ -85,4 +85,8 @@ ul {
 }
 .button:hover {
     background-color:coral ;
+}
+a{
+    text-decoration: none;
+    color: #b0726a;
 }
