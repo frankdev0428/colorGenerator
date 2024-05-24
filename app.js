@@ -1,0 +1,1 @@
+const colors  = ['#b0726a','#b06a7c'];
