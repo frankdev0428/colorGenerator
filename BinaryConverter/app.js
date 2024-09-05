@@ -24,7 +24,8 @@ const animationData = [
     marginTop: -200,
     addElDelay: 2000,
     msg: "decimalToBinary(1) returns '1' (base case) and gives that value to the stack below. Then it pops off the stack.",
-
+    showMsgDelay: 5000,
+    removeElDelay: 10000,
   }
 ];
 
@@ -38,15 +39,28 @@ const decimalToBinary = (input) => {
 
 const showAnimation = () => {
   result.innerText = "Call Stack Animation";
+
   animationData.forEach((obj) => {
     setTimeout(() => {
       animationContainer.innerHTML += `
-      <p id="${obj.inputVal}" style="margin-top: ${obj.marginTop}px;" 
-      class=""animation-frame"></p>
+        <p id="${obj.inputVal}" style="margin-top: ${obj.marginTop}px;" class="animation-frame">
+          decimalToBinary(${obj.inputVal})
+        </p>
       `;
     }, obj.addElDelay);
-    setTimeout(() => {}, obj.showMsgDelay);
-  })
+
+    setTimeout(() => {
+      document.getElementById(obj.inputVal).textContent = obj.msg;
+    }, obj.showMsgDelay);
+
+    setTimeout(() => {
+      document.getElementById(obj.inputVal).remove();
+    }, obj.removeElDelay);
+  });
+
+  setTimeout(() => {
+  result.textContent = decimalToBinary(5)
+  }, 20000);
 };
 
 const checkUserInput = () => {
