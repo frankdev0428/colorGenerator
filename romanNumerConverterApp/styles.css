@@ -1,0 +1,17 @@
+/* Add your own styles to make it visually appealing */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#output {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
