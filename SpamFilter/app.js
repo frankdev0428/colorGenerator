@@ -7,7 +7,8 @@ const helpRegex = /please help|assist me/i;
 
 const denyList = [helpRegex,dollarRegex];
 
-const dollarRegex  = /dollars/i;
+const dollarRegex  = /[0-9]+\s*(hundred|thousand|million|billion)?\s+dollars/i;
+
 
 const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
 
