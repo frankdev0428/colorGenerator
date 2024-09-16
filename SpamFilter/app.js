@@ -9,7 +9,7 @@ const denyList = [helpRegex,dollarRegex,freeRegex];
 
 const dollarRegex  = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
 
-const freeRegex = /free money/i
+const freeRegex = /fr[e3][e3] m[o0]n[]e3y/i
 
 
 const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
