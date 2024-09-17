@@ -4,12 +4,13 @@ const checkMessageButton = document.getElementById("check-message-btn");
 
 const helpRegex = /please help|assist me/i;
 
+const stockAlert = /stock alert/i
 
-const denyList = [helpRegex,dollarRegex,freeRegex];
+const denyList = [helpRegex,dollarRegex,freeRegex,stockAlert];
 
 const dollarRegex  = /[0-9]+\s*(?:hundred|thousand|million|billion)?\s+dollars/i;
 
-const freeRegex = /fr[e3][e3] m[o0]n[]e3y/i
+const freeRegex = /(?:\s|^)fr[e3][e3]\s \sm[o0]n[]e3y(?:\s|$)/i
 
 
 const isSpam = (msg) => denyList.some((regex) => regex.test(msg));
