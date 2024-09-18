@@ -1,7 +1,8 @@
 const sortButton = document.getElementById('sort');
 
 const sortInputArray = (event) => {
-    event.preventByDefault();
-
+    event.preventDefault();
+   const inputValues = document.getElementsByClassName('values-dropdown');
+   
 };
-sortButton.addEventListener('click',sortInputArray)
+sortButton.addEventListener('click',sortInputArray);
