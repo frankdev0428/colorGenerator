@@ -7,10 +7,20 @@ const median = (nums) => {
     const middle = length/2 - 1;
     return isEven(length) ? average([sorted[middle],sorted[middle + 1]]) : sorted[Math.ceil(middle)];
 }
+
+const spreadsheetFunctions = {
+    sum,
+    average,
+    median,
+}
 const range = (start,end) => Array(end - start + 1).fill(start).map((element,index) => element + index);
 const charRange = (start, end) => range(start.charCodeAt(0), end.charCodeAt(0)).map((code) => String.fromCharCode(code));
 
-
+const evalFormula = (x,cells) => {
+    const idToText = (id) => cells.find((cell) => cell.id === id).value;
+    const rangeRegext = /([A-J])/;
+    
+}
 window.onload = () => {
     const container = document.getElementById('container');
     const createLabel = (name) => {
@@ -29,7 +39,16 @@ window.onload = () => {
             input.type = "text";
             input.id = letter + number;
             input.ariaLabel = letter + number; 
+            input.onchange = update;
             container.appendChild(input);
         })
     })
+}
+const update = (event) => {
+   const element = event.target;
+   const value = element.value.replace(/\s/g,'');
+   if(!value.includes(element.id) && value[0] === "="){
+    
+   }
+
 }
