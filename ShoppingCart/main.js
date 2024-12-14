@@ -107,7 +107,19 @@ const products = [
       const {name,price} = product;
       this.items.push(product);
       const totalCountPerProduct = {};
-      this.items.forEach((dessert) => {})
+      this.items.forEach((dessert) => {
+        totalCountPerProduct[dessert.id] = (totalCountPerProduct[dessert.id] || 0) + 1;
+
+      })
+      const currentProductCountSpan = document.getElementById(`product-count-for-id${product.id}`);
+      const currentProductCount = totalCountPerProduct[product.id];
+      currentProductCount > 1 ? currentProductCountSpan.textContent = `${currentProductCount}x`: productsContainer.innerHTML += `<div class=product id=dessert${id}>
+        <p>
+         <span class="product-count" id="product-count-for-id${id}">${name}</span>
+        </p>
+        <p>${price}</p>
+      </div>`;
+      
     }
 
   } ;
