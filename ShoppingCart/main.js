@@ -123,3 +123,15 @@ const products = [
     }
 
   } ;
+  const cart = new ShoppingCart();
+  const addToCartBtns = document.getElementsByClassName('add-to-cart-btn');
+  addToCartBtns = [...addToCartBtns].forEach((btn) => {
+    btn.addEventListener('click',() => {
+      cart.addItem(Number(event.target.id),products)
+    })
+  });
+  cartBtn.addEventListener('click',() => {
+    isCartShowing = !isCartShowing;
+    showHideCartSpan.textContent = isCartShowing ? "Hide" : "Show";
+    
+  })
