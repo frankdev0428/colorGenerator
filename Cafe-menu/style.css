@@ -30,12 +30,18 @@ body {
   }
   h1,h2 {
     font-family: Impact,Serif;
+    
   }
   .established {
     font-style: italic;
   }
   h1 {
     font-size: 40px;
+    margin-top: 0;
+    
+  }
+  .address {
+    margin-bottom: 5px;
   }
   h2{
     font-size: 30px;
@@ -48,4 +54,22 @@ body {
   /* Footer */
   footer {
     font-size: 14px;
+  }
+  a {
+    color: black;
+  }
+  a:visited {
+    color: black;
+  }
+  a:hover {
+    color: brown;
+  }
+  a:active {
+    color: brown;
+  }
+  img {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
   }
