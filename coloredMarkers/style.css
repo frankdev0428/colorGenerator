@@ -7,14 +7,15 @@ h1 {
     margin: 10px auto;
 }
 .one {
-    background-color: red;
+    background-color: rgb(0, 0, 0);
 }
 .two {
-    background-color: green;
+    background-color: rgb(0,0,0);
 }
 .three {
-    background-color: blue;
+    background-color: rgb(0,0,0);
 }
 .container {
     background-color: rgb(0, 0,0);
+    padding: 10px 0;
 }
